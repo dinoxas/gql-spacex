@@ -1,13 +1,13 @@
 const express = require("express");
 const graphqlHTTP = require("express-graphql");
-// const expressGraphQL = require('express-graphql');
 const schema = require("./schema.js");
-// const cors = require('cors');
+const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
 // enable `cors` to set HTTP response header: Access-Control-Allow-Origin: *
-// app.use(cors());
+app.use(cors());
 
 app.use(
   "/graphql",
@@ -16,6 +16,11 @@ app.use(
     graphiql: true
   })
 );
+
+app.use(express.static("public"));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
 
 const PORT = process.env.POST || 5000;
 

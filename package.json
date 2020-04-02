@@ -1,0 +1,29 @@
+{
+  "name": "gql-spacex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinoxas/gql-spacex.git"
+  },
+  "author": "dinoxas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinoxas/gql-spacex/issues"
+  },
+  "homepage": "https://github.com/dinoxas/gql-spacex#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
